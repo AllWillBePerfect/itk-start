@@ -17,6 +17,14 @@ public class Main {
 
         Sphere sphere = new Sphere(5);
         Pyramid pyramid = new Pyramid(10, 5);
-        Cube cube = new Cube(5);
+        Parallepiped parallepiped = new Parallepiped(5, 5, 5);
+
+        System.out.println("Объем сферы: " + GeometryUtils.round(sphere.calculateVolume(), 2));
+        System.out.println("Площадь поверхности сферы: " + GeometryUtils.round(sphere.calculateSurfaceArea(), 2));
+        System.out.println("Объем пирамиды: " + GeometryUtils.round(pyramid.calculateVolume(), 2));
+        System.out.println("Площадь поверхности пирамиды: " + GeometryUtils.round(pyramid.calculateSurfaceArea(), 2));
+        System.out.println("Объем параллелепипеда: " + parallepiped.calculateVolume());
+        System.out.println("Площадь поверхности параллелепипеда: " + parallepiped.calculateSurfaceArea());
+
     }
 }
