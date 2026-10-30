@@ -5,6 +5,10 @@ public final class Circle implements Shape {
     private final int radius;
 
     public Circle(int radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Радиус круга должен быть больше нуля.");
+        }
+
         this.radius = radius;
     }
 

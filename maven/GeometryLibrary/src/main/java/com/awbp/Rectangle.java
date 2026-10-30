@@ -6,6 +6,10 @@ public final class Rectangle implements Shape {
     private final int height;
 
     public Rectangle(int width, int height) {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Стороны прямоугольника должны быть больше нуля.");
+        }
+
         this.width = width;
         this.height = height;
     }
