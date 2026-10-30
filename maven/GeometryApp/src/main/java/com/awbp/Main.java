@@ -8,7 +8,7 @@ public class Main {
         Triangle triangle = new Triangle(3,4,5);
         Rectangle rectangle = new Rectangle(5, 5);
 
-        System.out.println("Периметр круга: " + circle.calculatePerimeter());
+        System.out.println("Периметр круга: " + GeometryUtils.round(circle.calculatePerimeter(), 2));
         System.out.println("Площадь круга: " + circle.calculateArea());
         System.out.println("Периметр треугольника: " + triangle.calculatePerimeter());
         System.out.println("Площадь треугольника: " + triangle.calculateArea());
