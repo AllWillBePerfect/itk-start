@@ -14,5 +14,6 @@ public class Main {
         System.out.println("Площадь треугольника: " + triangle.calculateArea());
         System.out.println("Периметр прямоугольника: " + rectangle.calculatePerimeter());
         System.out.println("Площадь прямоугольника: " + rectangle.calculateArea());
+
     }
 }
