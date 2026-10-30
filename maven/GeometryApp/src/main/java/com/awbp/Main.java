@@ -15,5 +15,8 @@ public class Main {
         System.out.println("Периметр прямоугольника: " + rectangle.calculatePerimeter());
         System.out.println("Площадь прямоугольника: " + rectangle.calculateArea());
 
+        Sphere sphere = new Sphere(5);
+        Pyramid pyramid = new Pyramid(10, 5);
+        Cube cube = new Cube(5);
     }
 }
