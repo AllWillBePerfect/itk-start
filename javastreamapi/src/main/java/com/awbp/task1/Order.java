@@ -1,4 +1,4 @@
-package com.awbp;
+package com.awbp.task1;
 
 class Order {
     private String product;
