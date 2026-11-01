@@ -2,6 +2,9 @@ package com.awbp;
 
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public final class JavaCollectionsUtils {
 
@@ -19,5 +22,12 @@ public final class JavaCollectionsUtils {
 
         return result;
     }
+
+    public static <T> Map<T, Long> countOfElements(T[] array) {
+        return Arrays.stream(array).collect(Collectors.groupingBy(
+                value -> value, Collectors.counting()
+        ));
+    }
+
 
 }
