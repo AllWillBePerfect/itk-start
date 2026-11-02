@@ -1,6 +1,5 @@
 package com.awbp.task1;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -11,7 +10,7 @@ public class StreamCollectorsExample {
     public static void main(String[] args) {
 
         // 1. Создайте список заказов с разными продуктами и их стоимостями.
-        var res = generateList().stream()
+        generateList().stream()
                 // 2. Группируйте заказы по продуктам
                 .collect(
                         Collectors.groupingBy(
@@ -24,18 +23,8 @@ public class StreamCollectorsExample {
                 .sorted(Map.Entry.<String, Double>comparingByValue().reversed())
                 // 5. Выберите три самых дорогих продукта.
                 .limit(3)
-                .collect(Collectors.toMap(
-                Map.Entry::getKey,
-                Map.Entry::getValue,
-                (a, b) -> a,
-                LinkedHashMap::new
-        ));
-
-        // 6. Выведите результат: список трех самых дорогих продуктов и их общая стоимость.
-        res.forEach((product, cost) ->
-                System.out.println(product + ": " + cost)
-        );
-
+                // 6. Выведите результат: список трех самых дорогих продуктов и их общая стоимость.
+                .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
 
     }
 
